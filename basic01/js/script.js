@@ -3,7 +3,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.119.1/examples/jsm/cont
 
 // 장면 생성
 const scene = new THREE.Scene();
-// 카메라 세부 설정
+// 카메라 세부 설정 - 75(fov 카메라 각도, 높을수록 광각), 0.1(near), 1000(far)
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 // renderer 설정
