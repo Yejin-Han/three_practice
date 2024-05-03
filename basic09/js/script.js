@@ -12,7 +12,7 @@ const farPlane = 1000;
 const camera = new THREE.PerspectiveCamera(
   fov, window.innerWidth / window.innerHeight, nearPlane, farPlane
 );
-camera.position.z = 4;
+camera.position.z = 48;
 
 const canvas = document.getElementById('myCanvas');
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
@@ -24,14 +24,13 @@ const controls = new OrbitControls(camera, renderer.domElement);
 const stats = new Stats();
 document.body.appendChild(stats.dom);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
 ambientLight.castShadow = true;
 scene.add(ambientLight);
 
-const spotLight = new THREE.SpotLight(0xffffff, 1);
-spotLight.castShadow = true;
-spotLight.position.set(0, 64, 32);
-scene.add(spotLight);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+directionalLight.position.set(0, 32, 64);
+scene.add(directionalLight);
 
 window.addEventListener('resize', () => onResize(), false);
 
@@ -69,8 +68,8 @@ gltfLoader.load('./assets/scene.gltf', (gltfscene) => {
   loadedModel = gltfscene;
 
   gltfscene.scene.rotation.y = Math.PI / 8;
-  // gltfscene.scene.position.y = 3;
-  // gltfscene.scene.scale.set(10, 10, 10);
+  gltfscene.scene.position.y = 3;
+  gltfscene.scene.scale.set(10, 10, 10);
   scene.add(gltfscene.scene);
 });
 

@@ -14,7 +14,7 @@ const farPlane = 1000;
 const camera = new THREE.PerspectiveCamera(
   fov, window.innerWidth / window.innerHeight, nearPlane, farPlane
 );
-camera.position.z = 4;
+camera.position.z = 120;
 
 const canvas = document.getElementById('myCanvas');
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
@@ -30,10 +30,9 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 ambientLight.castShadow = true;
 scene.add(ambientLight);
 
-const spotLight = new THREE.SpotLight(0xffffff, 1);
-spotLight.castShadow = true;
-spotLight.position.set(0, 64, 32);
-scene.add(spotLight);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(0, 32, 64);
+scene.add(directionalLight);
 
 window.addEventListener('resize', () => onResize(), false);
 

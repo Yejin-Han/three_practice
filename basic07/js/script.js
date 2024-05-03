@@ -34,11 +34,11 @@ scene.add(spotLight); */
 
 window.addEventListener('resize', () => onResize(), false);
 
-const uniforms = {
-  u_time: { type: 'f', value: 1.0 },
-  colorB: { type: 'vec3', value: new THREE.Color(0xfff000) },
-  colorA: { type: 'vec3', value: new THREE.Color(0xffffff) },
-}
+// const uniforms = {
+//   u_time: { type: 'f', value: 1.0 },
+//   colorB: { type: 'vec3', value: new THREE.Color(0xfff000) },
+//   colorA: { type: 'vec3', value: new THREE.Color(0xffffff) },
+// }
 
 function animate() {
   window.requestAnimationFrame(animate);
@@ -49,7 +49,7 @@ function animate() {
 animate();
 
 function render() {
-  uniforms.u_time.value += clock.getDelta();
+  // uniforms.u_time.value += clock.getDelta();
   renderer.render(scene, camera);
 }
 

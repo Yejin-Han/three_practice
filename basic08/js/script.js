@@ -11,7 +11,8 @@ const farPlane = 1000;
 const camera = new THREE.PerspectiveCamera(
   fov, window.innerWidth / window.innerHeight, nearPlane, farPlane
 );
-camera.position.z = 4;
+camera.position.y = 9;
+camera.position.z = 36;
 
 const canvas = document.getElementById('myCanvas');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
