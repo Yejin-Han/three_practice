@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.0/build/three.module.min.js",
+        "three/addons/" : "https://cdn.jsdelivr.net/npm/three@0.164.0/examples/jsm/",
+        "Stats" : "https://cdnjs.cloudflare.com/ajax/libs/stats.js/r17/Stats.min.js",
+        "cannon-es" : "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/+esm",
+        "cannon-es-debugger" : "https://cdn.jsdelivr.net/npm/cannon-es-debugger@1.0.0/+esm"
+      }
+    }
+  </script>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
