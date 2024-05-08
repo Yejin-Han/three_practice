@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #212529;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cover-container {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 42em;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-row.row-flex {
+    margin-bottom: 1rem;
+}
+
+.form-row.row-flex .form-group {
+    width: calc(50% - 1.2rem);
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.custom-range {
+    width: 100%;
+    height: 0.5rem;
+    padding: 0;
+    border-radius: 0.5rem;
+    background-color: #e9e9e9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.btn:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+#bgCanvas {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+@media screen and (max-width: 624px) {
+    form {
+        max-width: 360px;
+    }
+
+    .form-row {
+        display: block;
+    }
+
+    .form-row.row-flex .form-group {
+        width: calc(100% - 1.2rem);
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .form-row:last-child {
+        margin-top: 2rem;
+    }
+}
